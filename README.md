@@ -1,4 +1,4 @@
-# Hair Salon Management System
+# Hair Salon Management System 🍃☁️
 
 This project demonstrates a microservices architecture for managing a hair salon using Spring Boot, Spring Cloud, and Netflix Eureka. The application consists of multiple microservices, each responsible for a specific business functionality, such as managing appointments, customers, services, and staff. These microservices register with Eureka for service discovery.
 
@@ -54,7 +54,7 @@ cd hair-salon-management
 
 4. **Start Microservices**:
   For each microservice 
-  - cd <microservice>
+  - cd <<microservice>>
   - mvn clean install
   - mvn spring-boot:run
 
@@ -84,10 +84,10 @@ cd hair-salon-management
 - **API Gateway**: `api-gateway`
 - **Appointment Service**: `appointment-service`
 - **User Service**: `user-service`
-- **Product Service**: `appointment-service`
+- **Product Service**: `product-service`
 - **Order Service**: `order-service`
 - **HairService Service**: `hairservice-service`
-- **Common Service**: `appointment-service`
+- **Common Service**: `common-service`
 
 ## Dependencies
 The project uses the following dependencies:
@@ -102,13 +102,12 @@ The project uses the following dependencies:
 ## Dockerization
 Build and run container for each service in DockerFile
 Ex:
-  - cd <microservice>
-  - docker build -t <microservice>:0.0.1 .
-  - docker run -d -p 8084:8084 <microservice>:0.0.1
+  - cd <<microservice>>
+  - docker build -t <<microservice>>:0.0.1 .
+  - docker run -d -p 8084:8084 <<microservice>>:0.0.1
 Adjust port numbers as necessary.
 ## Troubleshooting
 If you encounter any issues, please check the following:
   - Ensure MySQL is running and the database schema is created.
   - Verify that Eureka Server and Config Server are up and running.
   - Check the logs for any error messages.
-
