@@ -48,18 +48,27 @@ cd hair-salon-management
   - mvn spring-boot:run
 
 3. **Start API Gateway**:
-  - cd api-gateway
+  - cd apigateway
   - mvn clean install
   - mvn spring-boot:run
-
-4. **Start Microservices**:
+4. **Setup AxonServer**:
+  - Download and install AxonServer if you haven't already.
+  - Start AxonServer by running the following command:
+    ```
+      java -jar axonserver.jar
+    ```
+  - Access AxonServer Dashboard in your browser to monitor and manage Axon components:
+    ```
+      http://localhost:8024
+    ```
+5. **Start Microservices**:
   For each microservice 
-  - cd <<microservice>>
+  - cd microservice
   - mvn clean install
   - mvn spring-boot:run
 
 6. **Configure Microservices with MySQL**:
-   - Edit the `application.properties` or `application.yml` file in each microservice directoryto configure MySQL connection details. Example configuration:
+   - Edit the `application.properties` or `application.yml` file in each microservice directory to configure MySQL connection details. Example configuration:
      ```yaml
      spring:
        datasource:
@@ -69,13 +78,13 @@ cd hair-salon-management
      ```
      Replace `salon_db`, `root`, and `rootpassword` with your MySQL database name, username, and password.
 
-9. **Access Eureka Dashboard**:
+7. **Access Eureka Dashboard**:
    - Open Eureka Dashboard in your browser to view registered microservices:
      ```
-     http://localhost:8761
+       http://localhost:8761
      ```
 
-10. **Testing with Postman**:
+8. **Testing with Postman**:
     - Import the provided Postman collection (`Microservice App.postman_collection.json`) for testing API endpoints.
 
 ## Microservices
@@ -100,11 +109,11 @@ The project uses the following dependencies:
 - MySQL Connector
 - Docker
 ## Dockerization
-Build and run container for each service in DockerFile
+Build and run containers for all services in DockerFile
 Ex:
-  - cd <<microservice>>
-  - docker build -t <<microservice>>:0.0.1 .
-  - docker run -d -p 8084:8084 <<microservice>>:0.0.1
+  - cd microservice
+  - docker build -t microservice:0.0.1 .
+  - docker run -d -p 8084:8084 microservice:0.0.1
 Adjust port numbers as necessary.
 ## Troubleshooting
 If you encounter any issues, please check the following:
