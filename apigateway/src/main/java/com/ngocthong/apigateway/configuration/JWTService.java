@@ -17,7 +17,7 @@ import java.util.function.Function;
 @Service
 public class JWTService {
 
-    private String secretKey = "404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970"; // Base64-encoded secret key
+    private String secretKey = "{{}}"; // Base64-encoded secret key
     private long jwtExpiration = 864000000; // 10 days in milliseconds
     private long refreshExpiration = 604800000; // 7 days in milliseconds
 
