@@ -21,7 +21,6 @@ The architecture consists of the following components:
 - **Microservices**: Hairservice, Orderservice, Appointmentservice, Productservice, Userservice.
 - **Axon Server**
 - **MySQL Database**: Database for data persistence.
-![Architecture Diagram](architecture-diagram.png)
 
 ## Prerequisites
 
@@ -37,7 +36,7 @@ Clone the repository:
 ```bash
 git clone [https://github.com/nqtoannn/Microservices-Hair-Salon-Management](https://github.com/nqtoannn/Microservices-Hair-Salon-Management)
 cd hair-salon-management
-
+```
 ## Running the Application
 1. **Start MySQL Database**: 
   - Ensure MySQL Server is running.
